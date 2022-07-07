@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=``">
+    <title>NTasks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="boardStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body onload="onloadRender()">
+    <div class="body-container">
+
+    <!-- BOARD CREATER  -->
+    <div class="board-creater-container" data-new-board-collecter >
+        <div class="board-creater-body">
+            <h3 class="board-title">Add New Board</h3>
+            <form action="#"  data-board-create-btn  onsubmit="preventReload()">
+                <p>Title</p>
+                <input type="text" class="board-input-fields" data-new-board-title     required>
+                <p>Description</p>
+                <textarea class="board-input-fields" data-new-board-description required></textarea>
+                <div class="board-input-btn">
+                    <input type="submit"value="Create Board">
+                </div>
+            </form>
+        </div>
+    </div>
+
+  
+    <!-- NAVIGATION BAR  -->
+    <nav>
+        <div class="nav-header">
+            <img src="images/NT-logo.png" alt="NT-logo">
+            <h1>NTasKs</h1>
+        </div>
+        <div class="nav-body">
+            <div class="nav-body-title">
+                <h6>ALL BOARDS (8)</h6>
+            </div>
+            <div class="nav-body-content">
+                <div class="nav-board-list">
+                    <ul class="board-lists" data-board-list>
+                        <!-- <li>
+                            <button class="board-list active">
+                                <i class='bx bx-layout bx-xs'></i>
+                                <p>DataStructure</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="board-list"  >
+                                <i class='bx bx-layout bx-xs'></i>
+                                <p>Roadmap</p>
+                            </button>
+                        </li> -->
+                    </ul>
+                    <button class="new-board" data-create-board>
+                        <i class='bx bx-layout bx-xs'></i>
+                        <p><span style="font-weight:bolder;">+</span> Create new board</p>
+                    </button>
+
+                </div>
+                <div class="nav-btns">
+                    <div class="nav-theme-btns">
+                    </div>
+                    <div class="nav-hider">
+                        <button data-nav-hider>
+                            <i class='bx bx-hide'></i>
+                            <p>Hide Sidebar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BUTTON TO DISPLAY NAV AFTER NAV IS HIDEN -->
+    <div class="nav-show">
+        <button data-nav-show><i class='bx bxs-chevrons-right'></i>
+        </button>
+    </div>
+
+   
+
+    <header>
+        <div class="header-flex">
+            <div class="brard-title">
+                <h3 data-header-board-title></h2>
+            </div>
+            <div class="header-right">
+                <div class="todo-add-btn">
+                    <button><span style="font-weight:bolder;">+</span> Add New Task</button>
+                </div>
+                <div class="header-menu-btn">
+                    <button><i class='bx bx-dots-vertical-rounded bx-sm '></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="content-flex" data-col-flex>
+                <div class="content-col">
+                    <div class="content-col-header">
+                        <div class="col-icon"></div>
+                        <h5>Todo</h5>
+                    </div>
+
+                    <div class="Todo">
+                        <h5>Completer NTasks</h5>
+                        <p>Apply concepts used in Whatsapp</p>
+                    </div>
+                    
+                </div>
+
+                <div class="content-col">
+                    
+                    <div class="content-col-header">
+                        <div class="col-icon"></div>
+                        <h5>Doing</h5>
+                    </div>
+
+                    <div class="Todo">
+                        <h5>NTasks Content section</h5>
+                        <p>Flex or grid</p>
+                    </div>
+                    
+                    <div class="Todo">
+                        <h5>Checking</h5>
+                        <p>Checking the todo element when long text is entered , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero reprehenderit a quae aut autem hic error expedita eius? Voluptate, at.
+
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="content-col">
+                    <div class="content-col-header">
+                        <div class="col-icon"></div>
+                        <h5>Done</h5>
+                    </div>
+                    
+                    <div class="Todo">
+                        <h5>Nav</h5>
+                        <p>Nav design is complete</p>
+                    </div>
+                    <div class="Todo">
+                        <h5>Header</h5>
+                        <p>Header is almost complete</p>
+                    </div>
+                    
+                </div>
+
+                <div class="content-col">
+                    <div class="content-col-header">
+                        <div class="col-icon"></div>
+                        <h5>Done</h5>
+                    </div>
+                    
+                    <div class="Todo">
+                        <h5>Nav</h5>
+                        <p>Nav design is complete</p>
+                    </div>
+                    <div class="Todo">
+                        <h5>Header</h5>
+                        <p>Header is almost complete</p>
+                    </div>
+                    
+                </div>
+
+                <div class="content-col">
+                    <div class="content-col-header">
+                        <div class="col-icon"></div>
+                        <h5>Done</h5>
+                    </div>
+                    
+                    <div class="Todo">
+                        <h5>Nav</h5>
+                        <p>Nav design is complete</p>
+                    </div>
+                    <div class="Todo">
+                        <h5>Header</h5>
+                        <p>Header is almost complete</p>
+                    </div>
+                    
+                </div>
+
+                <!-- For creating new column -->
+                <div class="content-col new-col-container">
+                    <div class="new-col-name-colector" data-col-name-colector-container>
+                        <div class="col-icon"></div>
+                        <input type="text" class="col-name-input" id="col-name-input" data-col-name-input> 
+                    </div>
+                    <div class="new-content-col">
+                        <button data-new-column-creater>
+                            + New Column
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+    </div>
+
+    <template id="board-list-li">
+        <li>
+            <button class="board-list"  onclick="boardSelector()">
+                <i class='bx bx-layout bx-xs'></i>
+                <p> </p>
+            </button>
+        </li>
+    </template>
+
+
+    <template id="col-list-div">
+        <div class="content-col">
+            <div class="content-col-header">
+                <div class="col-icon"></div>
+                <h5></h5>
+            </div>
+        </div>
+    </template>
+
+    <template id="new-col-container">
+        <div class="content-col new-col-container">
+            <div class="new-col-name-colector" data-col-name-colector-container>
+                <div class="col-icon"></div>
+                <input type="text" class="col-name-input" id="col-name-input" data-col-name-input> 
+            </div>
+            <div class="new-content-col">
+                <button data-new-column-creater >
+                    + New Column
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <template id="todo-list-div">
+        <div class="Todo">
+            <h5>Completer NTasks</h5>
+            <p>Apply concepts used in Whatsapp</p>
+        </div>
+    </template>
+
+
+<script src="taskManager.js"></script>
+</body>
+</html>

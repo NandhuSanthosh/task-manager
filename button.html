@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-dark-themeColor:rgb(85, 73, 194);
+            --primary-dark-color:grey;
+        }
+
+        .button-body{
+            padding:2px;
+            background-color: var(--primary-dark-themeColor);
+            display:inline-block;
+            width:30px;
+            height:15px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .indicator{
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            background-color:white;
+            display:inline-block;
+            position:absolute;
+            right:2;
+        }
+        button{
+            background-color: transparent;
+            border:none;    
+        }
+    </style>
+</head>
+<body>
+    <button>
+        <div class="button-body">
+            <div class="indicator">
+
+            </div>
+        </div>
+    </button>
+    <script>
+        let realBtn = document.querySelector('button');
+        let btn = document.querySelector('.indicator');
+        let btnBody = document.querySelector('.button-body')
+        console.log(btn)
+        realBtn.addEventListener('click',btnOnOff);
+        let btnStatus = 1;
+        function btnOnOff(){
+            console.log(event)
+            if(btnStatus == 0){
+                btn.style.left='auto';
+                btn.style.backgroundColor='white'
+                btnBody.style.backgroundColor='var(--primary-dark-themeColor';
+                btn.style.right='2';
+                btnStatus=1;
+            }else{
+                btn.style='rigth:auto;left:2;background-color:darkgrey';
+                btnBody.style = 'background-color:var(--primary-dark-color)';
+                btnStatus = 0;
+            }
+        }
+        
+    </script>
+</body>
+</html>
